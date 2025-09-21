@@ -3,27 +3,23 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.env
-.env
+*.egg-info/
 .venv/
 venv/
+.env
 
 # Node
 node_modules/
-web/node_modules/
-web/.npm/
-web/.cache/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
 
-# OS/editor
+# OS
 .DS_Store
 Thumbs.db
-.idea/
+
+# IDE
 .vscode/
-
-# Downloads/temp
-*.part
-*.tmp
-*.log
-
-# Byte-compiled / optimized / DLL files
-backend-flask/__pycache__/
+.idea/
