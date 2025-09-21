@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.env
+.venv/
+venv/
+
+# Node
+node_modules/
+web/node_modules/
+web/.npm/
+web/.cache/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Downloads/temp
+*.part
+*.tmp
+*.log
+
+# Byte-compiled / optimized / DLL files
+backend-flask/__pycache__/
