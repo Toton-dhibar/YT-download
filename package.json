@@ -1,0 +1,9 @@
+{
+  "name": "v2ray-xhttp-proxy",
+  "version": "1.0.0",
+  "description": "xHTTP proxy for v2ray",
+  "dependencies": {},
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}
