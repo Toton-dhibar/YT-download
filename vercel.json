@@ -3,7 +3,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "http://20.192.29.205/vless",
+      "dest": "https://20.192.29.205/vless",
       "headers": {
         "Cache-Control": "public, max-age=3600, s-maxage=86400"
       }
