@@ -1,9 +1,8 @@
 {
-  "version": 2,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/xhttp/(.*)",
-      "dest": "/api/proxy"
+      "source": "/xhttp",
+      "destination": "https://129.154.235.90/xhttp"
     }
   ]
 }
