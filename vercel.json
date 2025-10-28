@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "http://20.192.29.205/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=3600, s-maxage=86400",
+        "X-Forwarded-Host": "ad.sdupdates.news"
+      }
+    }
+  ]
+}
