@@ -3,11 +3,7 @@
   "routes": [
     {
       "src": "/xhttp/(.*)",
-      "dest": "/api/xhttp.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/api/[[...path]].js?path=$1"
+      "dest": "/api/proxy"
     }
   ]
 }
