@@ -1,7 +1,7 @@
 import { createProxyServer } from 'http-proxy';
 
 const proxy = createProxyServer({
-  target: 'http://20.192.29.205:80', // your real V2Ray server
+  target: 'https://129.154.235.90:443', // your real V2Ray server
   changeOrigin: true,
   ws: true,
   secure: false
