@@ -3,20 +3,11 @@
   "routes": [
     {
       "src": "/xhttp/(.*)",
-      "dest": "/api/xhttp?path=$1"
-    },
-    {
-      "src": "/split/(.*)", 
-      "dest": "/api/split?path=$1"
+      "dest": "/api/xhttp.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/api/xhttp?path=$1"
+      "dest": "/api/[[...path]].js?path=$1"
     }
-  ],
-  "functions": {
-    "api/*.js": {
-      "maxDuration": 30
-    }
-  }
+  ]
 }
