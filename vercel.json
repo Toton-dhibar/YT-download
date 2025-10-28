@@ -2,11 +2,21 @@
   "version": 2,
   "routes": [
     {
+      "src": "/xhttp/(.*)",
+      "dest": "/api/xhttp?path=$1"
+    },
+    {
+      "src": "/split/(.*)", 
+      "dest": "/api/split?path=$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "https://20.192.29.205/vless",
-      "headers": {
-        "Cache-Control": "public, max-age=3600, s-maxage=86400"
-      }
+      "dest": "/api/xhttp?path=$1"
     }
-  ]
+  ],
+  "functions": {
+    "api/*.js": {
+      "maxDuration": 30
+    }
+  }
 }
