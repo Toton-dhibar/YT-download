@@ -1,0 +1,198 @@
+{
+  "_comment": "V2Ray Client Configuration Examples",
+  "_description": "Replace YOUR-UUID-HERE with your actual V2Ray UUID",
+  
+  "direct_connection_example": {
+    "log": {
+      "loglevel": "info"
+    },
+    "inbounds": [
+      {
+        "port": 1080,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        }
+      },
+      {
+        "port": 8080,
+        "protocol": "http"
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "ra.sdupdates.news",
+              "port": 443,
+              "users": [
+                {
+                  "id": "YOUR-UUID-HERE",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "ra.sdupdates.news",
+            "allowInsecure": false,
+            "alpn": ["h2", "http/1.1"]
+          },
+          "xhttpSettings": {
+            "path": "/xhttp",
+            "host": "ra.sdupdates.news",
+            "method": "GET",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+            }
+          }
+        },
+        "tag": "direct"
+      }
+    ]
+  },
+  
+  "vercel_proxy_connection_example": {
+    "log": {
+      "loglevel": "info"
+    },
+    "inbounds": [
+      {
+        "port": 1080,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        }
+      },
+      {
+        "port": 8080,
+        "protocol": "http"
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "your-project.vercel.app",
+              "port": 443,
+              "users": [
+                {
+                  "id": "YOUR-UUID-HERE",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "your-project.vercel.app",
+            "allowInsecure": false,
+            "alpn": ["h2", "http/1.1"]
+          },
+          "xhttpSettings": {
+            "path": "/xhttp",
+            "host": "your-project.vercel.app",
+            "method": "GET",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+            }
+          }
+        },
+        "tag": "vercel-proxy"
+      }
+    ]
+  },
+  
+  "v2rayn_gui_settings": {
+    "_comment": "For V2RayN (Windows) or V2RayNG (Android) GUI clients",
+    "direct_connection": {
+      "address": "ra.sdupdates.news",
+      "port": 443,
+      "user_id": "YOUR-UUID-HERE",
+      "alter_id": 0,
+      "security": "none",
+      "network": "xhttp",
+      "tls": "tls",
+      "sni": "ra.sdupdates.news",
+      "alpn": "h2,http/1.1",
+      "path": "/xhttp",
+      "host": "ra.sdupdates.news"
+    },
+    "vercel_proxy": {
+      "address": "your-project.vercel.app",
+      "port": 443,
+      "user_id": "YOUR-UUID-HERE",
+      "alter_id": 0,
+      "security": "none",
+      "network": "xhttp",
+      "tls": "tls",
+      "sni": "your-project.vercel.app",
+      "alpn": "h2,http/1.1",
+      "path": "/xhttp",
+      "host": "your-project.vercel.app"
+    }
+  },
+  
+  "vless_share_link_format": {
+    "_comment": "VLESS share link format for easy import",
+    "direct": "vless://YOUR-UUID-HERE@ra.sdupdates.news:443?encryption=none&security=tls&sni=ra.sdupdates.news&alpn=h2,http/1.1&type=xhttp&path=/xhttp&host=ra.sdupdates.news#Direct-Connection",
+    "vercel_proxy": "vless://YOUR-UUID-HERE@your-project.vercel.app:443?encryption=none&security=tls&sni=your-project.vercel.app&alpn=h2,http/1.1&type=xhttp&path=/xhttp&host=your-project.vercel.app#Vercel-Proxy"
+  },
+  
+  "clash_meta_config_example": {
+    "_comment": "Clash Meta configuration format",
+    "proxies": [
+      {
+        "name": "V2Ray-Direct",
+        "type": "vless",
+        "server": "ra.sdupdates.news",
+        "port": 443,
+        "uuid": "YOUR-UUID-HERE",
+        "network": "xhttp",
+        "tls": true,
+        "udp": true,
+        "skip-cert-verify": false,
+        "servername": "ra.sdupdates.news",
+        "xhttp-opts": {
+          "path": "/xhttp",
+          "headers": {
+            "Host": "ra.sdupdates.news"
+          }
+        }
+      },
+      {
+        "name": "V2Ray-Vercel-Proxy",
+        "type": "vless",
+        "server": "your-project.vercel.app",
+        "port": 443,
+        "uuid": "YOUR-UUID-HERE",
+        "network": "xhttp",
+        "tls": true,
+        "udp": true,
+        "skip-cert-verify": false,
+        "servername": "your-project.vercel.app",
+        "xhttp-opts": {
+          "path": "/xhttp",
+          "headers": {
+            "Host": "your-project.vercel.app"
+          }
+        }
+      }
+    ]
+  }
+}

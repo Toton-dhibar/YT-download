@@ -1,0 +1,28 @@
+# Python files (not needed for proxy)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+.env
+backend-flask/
+web/
+
+# Unnecessary files
+README.md
+YTDL--100%done.zip
+.git/
+.gitignore
+
+# Node modules (if any)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
