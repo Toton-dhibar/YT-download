@@ -1,24 +1,8 @@
 {
-  "version": 2,
-  "routes": [
-    {
-      "src": "/xhttp",
-      "dest": "https://ra.sdupdates.news/xhttp",
-      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"],
-      "headers": {
-        "X-Forwarded-Host": "ra.sdupdates.news",
-        "X-Forwarded-Proto": "https"
-      }
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
   "rewrites": [
     {
-      "source": "/xhttp/:path*",
-      "destination": "https://ra.sdupdates.news/xhttp/:path*"
+      "source": "/(.*)",
+      "destination": "https://ra.sdupdates.news/$1"
     }
   ]
 }
