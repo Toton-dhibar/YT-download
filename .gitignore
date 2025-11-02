@@ -16,6 +16,10 @@ pnpm-debug.log*
 dist/
 build/
 
+# Vercel
+.vercel
+.vercel_build_output/
+
 # OS
 .DS_Store
 Thumbs.db
@@ -23,3 +27,13 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# Temporary files
+/tmp/
+*.tmp
+*.log
+
+# Old project artifacts (from previous YT-download app)
+backend-flask/
+web/
+*.zip
