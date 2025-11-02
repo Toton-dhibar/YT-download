@@ -1,18 +1,5 @@
 {
-  "version": 2,
-  "functions": {
-    "api/proxy.js": {
-      "maxDuration": 30
-    }
-  },
-  "routes": [
-    {
-      "src": "/xhttp/(.*)",
-      "dest": "/api/proxy"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/api/proxy"
-    }
+  "rewrites": [
+    { "source": "/xhttp/(.*)", "destination": "/api/proxy" }
   ]
 }
