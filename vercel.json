@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/xhttp/:path*",
-      "destination": "/api/proxy"
+      "destination": "/api/proxy/:path*"
     }
   ],
   "headers": [

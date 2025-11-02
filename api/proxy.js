@@ -12,11 +12,14 @@ export const config = {
 
 export default async function handler(req) {
   // Extract the path after /api/proxy
+  // When /xhttp/some/path is rewritten to /api/proxy/some/path
+  // We get pathname = /api/proxy/some/path, and we extract /some/path
   const url = new URL(req.url);
   const path = url.pathname.replace('/api/proxy', '');
   const search = url.search;
   
   // Construct target URL - preserve the full path including /xhttp
+  // Result: https://ra.sdupdates.news/xhttp/some/path?query
   const targetUrl = `https://ra.sdupdates.news/xhttp${path}${search}`;
   
   try {

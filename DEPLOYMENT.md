@@ -44,13 +44,13 @@ This will open your browser for authentication.
 #### Step 3: Deploy from Project Directory
 
 ```bash
-cd /path/to/v2ray-xhttp-vercel-proxy
+cd /path/to/project
 vercel
 ```
 
 Answer the prompts:
 ```
-? Set up and deploy "~/v2ray-xhttp-vercel-proxy"? [Y/n] y
+? Set up and deploy "~/project"? [Y/n] y
 ? Which scope do you want to deploy to? [Your Account]
 ? Link to existing project? [y/N] n
 ? What's your project's name? v2ray-xhttp-proxy

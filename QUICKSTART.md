@@ -14,7 +14,7 @@ npm install -g vercel
 vercel login
 
 # 3. Deploy (from project directory)
-cd /path/to/v2ray-xhttp-vercel-proxy
+cd /path/to/project
 vercel --prod
 
 # 4. Done! Your proxy is live at: https://your-project.vercel.app
