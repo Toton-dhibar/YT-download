@@ -2,15 +2,30 @@
 
 A Vercel Edge Function that acts as a reverse proxy/CDN for V2Ray xhttp protocol traffic. This setup allows you to hide your real V2Ray server IP by routing all traffic through Vercel's CDN.
 
-## 📋 Project Structure
+## 📋 Documentation
+
+- **[QUICKSTART.md](QUICKSTART.md)** - Deploy in 5 minutes! Start here! ⚡
+- **[DEPLOYMENT.md](DEPLOYMENT.md)** - Detailed deployment guide (3 methods)
+- **[LIMITATIONS.md](LIMITATIONS.md)** - Vercel limitations and considerations
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** - How the proxy works under the hood
+- **[PROJECT-STRUCTURE.md](PROJECT-STRUCTURE.md)** - Detailed file structure explanation
+- **[v2ray-client-config-example.json](v2ray-client-config-example.json)** - Full V2Ray client config example
+
+## 📁 Project Structure
 
 ```
 .
 ├── api/
-│   └── proxy.js          # Edge Function that forwards xhttp traffic
-├── vercel.json           # Vercel deployment configuration
-├── package.json          # Project metadata
-└── README.md             # This file
+│   └── proxy.js                       # Edge Function that forwards xhttp traffic
+├── vercel.json                        # Vercel deployment configuration
+├── package.json                       # Project metadata
+├── v2ray-client-config-example.json   # V2Ray client config example
+├── README.md                          # This file (main documentation)
+├── QUICKSTART.md                      # 5-minute quick start guide
+├── DEPLOYMENT.md                      # Detailed deployment instructions
+├── LIMITATIONS.md                     # Vercel limitations explained
+├── ARCHITECTURE.md                    # System architecture details
+└── PROJECT-STRUCTURE.md               # File structure explanation
 ```
 
 ## 🎯 What This Does
