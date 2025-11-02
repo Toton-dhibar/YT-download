@@ -1,8 +1,20 @@
 {
-  "name": "vless-cdn",
+  "name": "v2ray-xhttp-vercel-proxy",
   "version": "1.0.0",
-  "description": "VLESS CDN Proxy",
+  "description": "Vercel Edge Function proxy for V2Ray xhttp protocol - Route V2Ray traffic through Vercel CDN",
   "scripts": {
-    "dev": "vercel dev"
-  }
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "v2ray",
+    "vless",
+    "xhttp",
+    "vercel",
+    "proxy",
+    "cdn",
+    "edge-function"
+  ],
+  "author": "",
+  "license": "MIT"
 }

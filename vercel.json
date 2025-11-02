@@ -1,5 +1,21 @@
 {
+  "version": 2,
+  "name": "v2ray-xhttp-proxy",
   "rewrites": [
-    { "source": "/xhttp/(.*)", "destination": "/api/proxy" }
+    {
+      "source": "/xhttp/:path*",
+      "destination": "/api/proxy"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/xhttp/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate"
+        }
+      ]
+    }
   ]
 }
