@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/xhttp",
-      "destination": "https://129.154.235.90:443/xhttp"
+      "destination": "https://20.192.29.205/xhttp"
     }
   ]
 }
