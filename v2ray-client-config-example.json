@@ -1,0 +1,90 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "port": 1080,
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true
+      }
+    },
+    {
+      "port": 1081,
+      "protocol": "http",
+      "settings": {
+        "timeout": 0
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "YOUR-PROJECT-NAME.vercel.app",
+            "port": 443,
+            "users": [
+              {
+                "id": "YOUR-UUID-HERE",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "YOUR-PROJECT-NAME.vercel.app",
+          "allowInsecure": false,
+          "fingerprint": "chrome"
+        },
+        "xhttpSettings": {
+          "path": "/xhttp",
+          "host": "YOUR-PROJECT-NAME.vercel.app",
+          "mode": "stream-up"
+        }
+      },
+      "tag": "proxy"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "block"
+    }
+  ],
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "type": "field",
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "geosite:category-ads-all"
+        ],
+        "outboundTag": "block"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+# Development files
+node_modules
+.env
+.env.local
+.env*.local
+
+# Version control
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+dist
+build
+*.log
+
+# Test files
+test
+tests
+*.test.js
+*.spec.js
+
+# Documentation (already included in deployment)
+# None - we want to include all documentation
+
+# Other project files not needed for proxy
+backend-flask
+web
+YTDL--100%done.zip
+*.zip
+*.tar.gz
