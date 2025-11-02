@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/xhttp",
-      "destination": "https://ra.sdupdates.news/xhttp"
+      "destination": "https://ra.sdupdates.news:443/xhttp"
     }
   ]
 }
