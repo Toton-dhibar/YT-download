@@ -1,0 +1,52 @@
+V2Ray xhttp Vercel CDN Reverse Proxy
+=====================================
+
+Project File Tree:
+
+YT-download/
+│
+├── 📄 Core Application Files (Ready to Deploy)
+│   ├── api/
+│   │   └── proxy.js                      (3.6 KB) - Edge function that proxies V2Ray xhttp traffic
+│   ├── vercel.json                       (306 B)  - Vercel routing configuration
+│   └── package.json                      (128 B)  - Node.js project metadata
+│
+├── 📚 Documentation (Complete Guides)
+│   ├── README.md                         (4.3 KB) - Main project overview
+│   ├── QUICKSTART.md                     (4.8 KB) - 5-minute deployment guide
+│   ├── DEPLOYMENT.md                     (13 KB)  - Complete deployment & troubleshooting
+│   ├── README-VERCEL-PROXY.md           (5.8 KB) - Technical docs & customization
+│   ├── ARCHITECTURE.md                   (15 KB)  - System architecture with diagrams
+│   ├── TESTING.md                        (9.1 KB) - Testing & validation guide
+│   ├── PROJECT-STRUCTURE.md             (5.6 KB) - File tree documentation
+│   └── SUMMARY.md                        (11 KB)  - Complete project summary
+│
+├── 📋 Example Configurations
+│   └── v2ray-client-config-example.json  (1.7 KB) - V2Ray client config template
+│
+├── ⚙️ Configuration Files
+│   ├── .vercelignore                     (437 B)  - Deployment exclusions
+│   ├── .gitignore                        (200 B)  - Git ignore rules
+│   └── FILE-TREE.txt                     (This file) - Visual file tree
+│
+└── 📁 Other Files
+    └── YTDL--100%done.zip                (29 KB)   - Legacy archive (not needed for proxy)
+
+Total Project Size: ~100 KB (excluding .git)
+Core Application: ~4 KB
+Documentation: ~70 KB
+
+=====================================
+
+Quick Start:
+1. Deploy to Vercel (see QUICKSTART.md)
+2. Update V2Ray client config (see DEPLOYMENT.md)
+3. Connect and enjoy!
+
+Documentation:
+- New users → QUICKSTART.md
+- Complete guide → DEPLOYMENT.md
+- Technical details → ARCHITECTURE.md
+- Testing → TESTING.md
+
+=====================================
