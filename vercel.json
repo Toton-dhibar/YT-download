@@ -1,5 +1,28 @@
 {
+  "version": 2,
   "rewrites": [
-    { "source": "/xhttp/(.*)", "destination": "/api/proxy" }
+    { 
+      "source": "/xhttp/:path*", 
+      "destination": "/api/proxy" 
+    }
+  ],
+  "headers": [
+    {
+      "source": "/xhttp/:path*",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "*"
+        }
+      ]
+    }
   ]
 }
