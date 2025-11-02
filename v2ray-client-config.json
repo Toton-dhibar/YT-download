@@ -31,7 +31,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "your-project.vercel.app",
+            "address": "YOUR-PROJECT-NAME.vercel.app",
             "port": 443,
             "users": [
               {
@@ -48,11 +48,11 @@
         "security": "tls",
         "xhttpSettings": {
           "path": "/xhttp",
-          "host": "your-project.vercel.app",
+          "host": "YOUR-PROJECT-NAME.vercel.app",
           "mode": "stream"
         },
         "tlsSettings": {
-          "serverName": "your-project.vercel.app",
+          "serverName": "YOUR-PROJECT-NAME.vercel.app",
           "allowInsecure": false,
           "fingerprint": "chrome"
         }

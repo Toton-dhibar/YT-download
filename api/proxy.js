@@ -8,10 +8,14 @@ export const config = {
 
 export default async function handler(req) {
   // Extract the path from the request URL
+  // Vercel rewrites preserve the original path in the URL
   const url = new URL(req.url);
+  
+  // The pathname will still contain /xhttp/... from the original request
+  // because Vercel's rewrite is internal (doesn't change the URL visible to the function)
   const path = url.pathname + url.search;
   
-  // Build the target URL - preserve the /xhttp path
+  // Build the target URL - preserve the full path including /xhttp
   const targetUrl = `https://ra.sdupdates.news${path}`;
   
   // Prepare headers - forward all except 'host'
@@ -28,7 +32,7 @@ export default async function handler(req) {
     const response = await fetch(targetUrl, {
       method: req.method,
       headers: headers,
-      body: req.method !== 'GET' && req.method !== 'HEAD' ? req.body : undefined,
+      body: req.method !== 'GET' && req.method !== 'HEAD' && req.method !== 'OPTIONS' ? req.body : undefined,
       // Important for xhttp: don't follow redirects automatically
       redirect: 'manual',
     });
