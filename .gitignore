@@ -16,6 +16,10 @@ pnpm-debug.log*
 dist/
 build/
 
+# Vercel
+.vercel
+.vercel/
+
 # OS
 .DS_Store
 Thumbs.db
