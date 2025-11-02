@@ -1,0 +1,8 @@
+{
+  "name": "vless-cdn",
+  "version": "1.0.0",
+  "description": "VLESS CDN Proxy",
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}
