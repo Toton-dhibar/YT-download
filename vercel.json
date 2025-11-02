@@ -1,8 +1,18 @@
 {
-  "rewrites": [
+  "version": 2,
+  "functions": {
+    "api/proxy.js": {
+      "maxDuration": 30
+    }
+  },
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "https://ra.sdupdates.news/$1"
+      "src": "/xhttp/(.*)",
+      "dest": "/api/proxy"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/proxy"
     }
   ]
 }
