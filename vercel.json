@@ -1,5 +1,20 @@
 {
+  "version": 2,
   "rewrites": [
-    { "source": "/xhttp/(.*)", "destination": "/api/proxy" }
+    {
+      "source": "/xhttp/:path*",
+      "destination": "/api/proxy"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/xhttp/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    }
   ]
 }
