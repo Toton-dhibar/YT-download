@@ -1,0 +1,34 @@
+# Documentation (not needed for deployment)
+DEPLOYMENT.md
+CLIENT-CONFIG-GUIDE.md
+README.md
+
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Development files
+node_modules
+.vscode
+.idea
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Example/test files
+*.zip
+
+# Python files (from old project)
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.venv
+venv
+backend-flask
+web
