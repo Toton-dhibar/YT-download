@@ -22,6 +22,26 @@ V2Ray Client → Vercel CDN (your-project.vercel.app)
 
 The Vercel Edge Function transparently forwards all requests from `/xhttp/*` to your real V2Ray server while preserving headers, methods, and request bodies.
 
+## 📚 Documentation Index
+
+**Start Here:**
+- 📖 **[README.md](./README.md)** (this file) - Project overview
+- 🚀 **[QUICKSTART.md](./QUICKSTART.md)** - Get started in 5 minutes
+- 📋 **[PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)** - Complete project summary
+
+**Deployment:**
+- 📦 **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Complete deployment guide
+- 🔧 **[deploy.sh](./deploy.sh)** - Interactive deployment script
+
+**Configuration:**
+- 📱 **[V2RAY_CONFIG.md](./V2RAY_CONFIG.md)** - Client configuration examples
+- 📄 **[example-v2ray-config.json](./example-v2ray-config.json)** - Reference config
+
+**Technical:**
+- 🏗️ **[ARCHITECTURE.md](./ARCHITECTURE.md)** - Technical deep-dive
+- ❓ **[FAQ.md](./FAQ.md)** - 50+ questions answered
+- 🔍 **[TROUBLESHOOTING.md](./TROUBLESHOOTING.md)** - Solutions to common issues
+
 ## Project Structure
 
 ```
@@ -30,9 +50,17 @@ The Vercel Edge Function transparently forwards all requests from `/xhttp/*` to 
 │   └── proxy.js           # Edge Function that proxies requests
 ├── vercel.json            # Vercel routing and configuration
 ├── package.json           # Project metadata
+├── deploy.sh              # Interactive deployment script
+├── example-v2ray-config.json  # Reference V2Ray config
+│
+├── README.md              # This file - Start here
+├── QUICKSTART.md          # 5-minute quick start
+├── PROJECT_SUMMARY.md     # Complete project summary
 ├── DEPLOYMENT.md          # Detailed deployment guide
-├── V2RAY_CONFIG.md        # V2Ray client configuration examples
-└── README.md              # This file
+├── V2RAY_CONFIG.md        # V2Ray client configuration
+├── ARCHITECTURE.md        # Technical architecture
+├── FAQ.md                 # Frequently asked questions
+└── TROUBLESHOOTING.md     # Troubleshooting guide
 ```
 
 ## Quick Start
